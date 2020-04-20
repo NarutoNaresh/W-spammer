@@ -23,7 +23,8 @@ def final_move():
     #user=driver.find_element_by_xpath("span[@title='{}']".format(name))
 														#span-->type..title-->attribute=value...{}.format()
     #user.click()
-    msg_box=driver.find_element_by_class_name('_13mgZ')#changes frequently,so inspect element to update it.   _13mgZ
+    msg_box=driver.find_element_by_xpath("//*[@id='main']/footer/div[1]/div[2]/div/div[2]")#changes frequently,so inspect element to update it.   _13mgZ
+    # Always use Xpath to target any element	
     n=int(li[2])
     for i in range(n):
             msg_box.send_keys(random.choice(a))
